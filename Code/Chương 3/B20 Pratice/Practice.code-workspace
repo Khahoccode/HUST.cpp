@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../Practice"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"b17": "cpp"
+		}
+	}
+}
