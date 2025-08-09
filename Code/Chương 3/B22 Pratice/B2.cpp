@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+
+//Tim GTLN trong mang 1 chieu
+
 int main (){
     int n;
     cout << "n =";

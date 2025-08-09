@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+
+// Tinh tong cac phan tu trong mang 2 chieu
+
 int main (){
      int n, m;
 
