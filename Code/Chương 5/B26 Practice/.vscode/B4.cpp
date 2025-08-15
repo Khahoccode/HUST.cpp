@@ -13,7 +13,7 @@ int main(){
       str.erase(0,1); 
 }
 
-// Xoa khoang trong o giua cac tu
+// Xoa khoang trong o giua cac tu (WHILE)
     while(i < str.length()){
 
         if(str[i] == ' ' && str[i+1] == ' ')
@@ -23,12 +23,12 @@ int main(){
             i++;
         }
 }
-// Xoa khoang trong o cuoi tu
+// Xoa khoang trong o cuoi tu (WHILE)
     while(str[str.length() - 1] == ' '){
         str.erase(str.length() - 1, 1);
     }
 
-    // chuan chinh ta cac chu
+    // chuan chinh ta cac chu (FOR)
     for(int i = 0; i < str.length(); i++){
         str[i] = tolower(str[i]);
     }
