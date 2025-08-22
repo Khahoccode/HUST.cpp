@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
     - name: make
       run: make
+    - name: Build
+      run: g++ -std=c++17 -o main HUST.cpp
     - name: make check
       run: make check
     - name: make distcheck
