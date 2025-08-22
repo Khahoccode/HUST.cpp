@@ -14,8 +14,20 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Build C++ code
-      run: g++ -std=c++17 -Wall -Wextra -o main HUST.cpp
+    - name: Show files (debug)
+      run: ls -R
 
+    - name: Build all .cpp (recursively)
+      shell: bash
+      run: |
+        shopt -s globstar nullglob
+        SRC=(**/*.cpp)
+        echo "Sources: ${SRC[*]}"
+        if [ ${#SRC[@]} -eq 0 ]; then
+          echo "No .cpp files found!" && exit 1
+        fi
+        g++ -std=c++17 -O2 -Wall -Wextra -o main "${SRC[@]}"
+
+    # Nếu chương trình yêu cầu nhập từ stdin và bạn không muốn CI bị treo, hãy comment bước này.
     - name: Run program
       run: ./main
