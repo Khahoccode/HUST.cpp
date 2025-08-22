@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     - name: Build C++ code
-      run: g++ -std=c++17 -o main HUST.cpp
+      run: g++ -std=c++17 -Wall -Wextra -o main HUST.cpp
 
     - name: Run program
       run: ./main
