@@ -36,6 +36,7 @@ int main(){
     cout << "Cat: " << endl;
     cout << "Name: "  << cat.name << endl;
     cout << "weight: " << cat.weight << endl;
+    
     Dog dog;
     dog.weight = 10;
     dog.name = "Nau nau";
